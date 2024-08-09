@@ -1,0 +1,1 @@
+export * from '@lbaz123/lib2/components/lt-button';
