@@ -11,6 +11,8 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
         background-color: #007bff;
         cursor: pointer;
         transition: 0.3s ease;
+        display: flex;
+        align-items: center;
       }
       :host:hover {
         background-color: #0069d9;

@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.dev.json",
+  "exclude": ["projects/**/test.ts", "**/*.spec.ts"],
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/lib",
+    "declarationMap": false,
+    "paths": {
+      "@lbaz/lib2/*": ["./dist/lib2/*"],
+      "@lbaz/lib2":   ["./dist/lib2/index"],
+      "@lbaz/ui/*":   ["./dist/ui/*"],
+      "@lbaz/ui":     ["./dist/ui/index"]
+    }
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
+  }
+}

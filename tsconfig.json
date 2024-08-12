@@ -3,24 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
+    "typeRoots": ["node_modules/@types"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "paths": {
-      "lib2": [
-        "dist/lib2/lib2",
-        "dist/lib2"
-      ],
-      "@lbaz123/*": [
-        "project/lib2/*"
-      ],
-      "@lbaz123": [
-        "project/lib2/index"
-      ]
-    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -30,15 +19,58 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "isolatedModules": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noStrictGenericChecks": false,
+    "allowUmdGlobalAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@lbaz/lib2/*": ["projects/lib2/*"],
+      "@lbaz/lib2": ["projects/lib2/index"],
+      "@lbaz/ui/*": ["projects/ui/*"],
+      "@lbaz/ui": ["projects/ui/index"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "enableIvy": true,
+    "preserveWhitespaces": false,
+    "annotateForClosureCompiler": false,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true,
+    "strictLiteralTypes": true,
+    "strictInputTypes": true,
+    "strictInputAccessModifiers": true,
+    "strictNullInputTypes": true,
+    "strictAttributeTypes": true,
+    "strictSafeNavigationTypes": true,
+    "strictDomLocalRefTypes": true,
+    "strictOutputEventTypes": true,
+    "strictDomEventTypes": true,
+    "strictContextGenerics": true
+  },
+  "ts-node": {
+    "files": true,
+    "transpileOnly": true,
+    "compilerOptions": {
+      "types": ["node"],
+      "module": "commonjs"
+    }
   }
 }

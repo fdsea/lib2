@@ -1,2 +1,2 @@
-export * from './components';
-export * from './services';
+export * from '@lbaz/lib2/components';
+export * from '@lbaz/lib2/services';
